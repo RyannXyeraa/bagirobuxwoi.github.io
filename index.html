@@ -1,0 +1,248 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Bagi Robux Woi</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: black;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #2f575a;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      position: relative;
+      z-index: 10;
+      height: 56px;
+    }
+
+    header button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.875rem; /* 30px */
+      cursor: pointer;
+      outline: none;
+    }
+
+    header h1 {
+      color: white;
+      font-weight: 800;
+      font-size: 2.5rem; /* 40px */
+      user-select: none;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+      margin: 0;
+    }
+
+    header button img {
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      cursor: pointer;
+    }
+
+    .background-image {
+      width: 100%;
+      height: calc(100vh - 56px);
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 56px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .overlay h2 {
+      color: white;
+      font-weight: 800;
+      font-size: 2rem;
+      user-select: none;
+      text-shadow: 2px 2px 6px black;
+      margin: 0;
+    }
+
+    @media (min-width: 640px) {
+      .overlay h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .overlay h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 3rem;
+      pointer-events: auto;
+    }
+
+    .btn {
+      font-weight: 800;
+      font-size: 1.25rem;
+      padding: 0.5rem 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+      cursor: pointer;
+      border: none;
+      color: white;
+      user-select: none;
+      transition: filter 0.2s ease;
+    }
+
+    .btn:focus {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    .btn-green {
+      background-color: #1dbf0a;
+    }
+
+    .btn-green:hover {
+      filter: brightness(1.1);
+    }
+
+    .btn-red {
+      background-color: #ff0000;
+    }
+
+    .btn-red:hover {
+      filter: brightness(1.1);
+    }
+
+    .bottom-right-text {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      pointer-events: none;
+      user-select: none;
+      color: #22d3ee; /* cyan-400 */
+      font-weight: 800;
+      font-size: 1.875rem; /* 30px */
+      text-shadow: 0 0 8px #00ffff;
+      z-index: 10;
+    }
+
+    /* Message box styles */
+    .message-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+      user-select: none;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 20;
+      max-width: 90vw;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .message-box.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .message-success {
+      background-color: #1dbf0a;
+      text-shadow: 0 0 6px #0a7a04;
+    }
+
+    .message-error {
+      background-color: #ff0000;
+      text-shadow: 0 0 6px #7a0000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button aria-label="Menu">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+    <h1>+</h1>
+    <button aria-label="Home">
+      <img alt="Home icon button with gray circular background" src="https://storage.googleapis.com/a1aa/image/8f92ef51-5796-4260-1268-714f1122f7bb.jpg" />
+    </button>
+  </header>
+
+  <img alt="Abstract black and white fluid background with bright white streaks and smooth curves" class="background-image" src="https://storage.googleapis.com/a1aa/image/c2ec3fa3-e4c1-45ab-d695-f5c3c767bb3e.jpg" />
+
+  <div class="overlay">
+    <h2>BAGI ROBUX WOI</h2>
+    <div class="buttons">
+      <button id="btnBagi" class="btn btn-green">Bagi</button>
+      <button id="btnOgah" class="btn btn-red">Ogah</button>
+    </div>
+  </div>
+
+  <div class="bottom-right-text">@RyannTo</div>
+
+  <div id="messageBox" class="message-box"></div>
+
+  <script>
+    const btnBagi = document.getElementById('btnBagi');
+    const btnOgah = document.getElementById('btnOgah');
+    const messageBox = document.getElementById('messageBox');
+
+    function showMessage(text, type) {
+      messageBox.textContent = text;
+      messageBox.className = 'message-box show'; // reset classes
+      if (type === 'success') {
+        messageBox.classList.add('message-success');
+      } else if (type === 'error') {
+        messageBox.classList.add('message-error');
+      }
+      // Hide message after 2.5 seconds
+      setTimeout(() => {
+        messageBox.classList.remove('show');
+      }, 2500);
+    }
+
+    btnBagi.addEventListener('click', () => {
+      showMessage('Berhasil Terkirim', 'success');
+    });
+
+    btnOgah.addEventListener('click', () => {
+      showMessage('Idihh', 'error');
+    });
+  </script>
+</body>
+</html>
